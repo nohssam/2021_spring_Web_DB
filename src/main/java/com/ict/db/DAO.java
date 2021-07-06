@@ -41,7 +41,6 @@ public class DAO {
 			pstm = conn.prepareStatement(sql);
 			rs = pstm.executeQuery();
 			while(rs.next()) {
-				// idx, id, pw, name, age, addr, reg;
 				VO vo = new VO();
 				vo.setIdx(rs.getString("idx"));
 				vo.setId(rs.getString("id"));
