@@ -24,7 +24,7 @@
 <body>
 	<div> 
 		<h1> 전체 회원 정보 보기 </h1>
-		<h3> [ 인원 추가 ] </h3>
+		<h3> [ <a href="join.jsp">인원 추가</a> ] </h3>
 		<table>
 			<thead>
 				<tr><th style="width: 20%">IDX</th><th style="width: 40%">ID</th><th style="width: 40%">NAME</th></tr>

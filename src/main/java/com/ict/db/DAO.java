@@ -65,6 +65,30 @@ public class DAO {
 		
 		return list;
 	}
+	
+	// 삽입
+	public int getInsert(VO vo) {
+		int result = 0 ;
+		try {
+			conn = getConnection();
+			String sql = "insert into members values(members_seq.nextval, ?,?,?,?,?, sysdate)";
+			pstm = conn.prepareStatement(sql);
+			pstm.setString(1, vo.getId());
+			pstm.setString(2, vo.getPw());
+			pstm.setString(3, vo.getName());
+			pstm.setString(4, vo.getAge());
+			pstm.setString(5, vo.getAddr());
+			result = pstm.executeUpdate();
+		} catch (Exception e) {
+		} finally {
+			try {
+				pstm.close();
+				conn.close();
+			} catch (Exception e2) {
+			}
+		}
+		return result;
+	}
 }
 
 
